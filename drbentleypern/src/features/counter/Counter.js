@@ -13,7 +13,10 @@ import ButtonIcon from '../../components/button/iconbutton';
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
 import AccountBox from "@mui/icons-material/AccountBox";
 import DefaultButton from '../../components/button/button';
-import SearchBar from '../../components/searchbar/searchbar'
+import SearchBar from '../../components/searchbar/searchbar';
+import Product from '../../components/products/Product';
+import Laptop from '../../laptoptest.jpg'
+
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
@@ -69,7 +72,8 @@ export function Counter() {
         <ButtonIcon label={"test"} color="inherit" icon={<ShoppingCart  />} />
         <DefaultButton label="test" startIcon={<AccountBox />} />
         <SearchBar />
+        <Product name="Test" price={1500} img={Laptop} />
       </div>
     </div>
-  );
+  ); 
 }
